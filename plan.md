@@ -6,8 +6,13 @@ sources:
 
 * http://youmightnotneedjquery.com/
 
-see Todd Motto's presentation
 write jsperf.com tests
+
+Introduction
+============
+
+I'm Craig Buckler. Find me at most places using that name - it's fairly unique; Twitter, Github, LinkedIn etc.
+
 
 Do you really need jQuery
 =========================
@@ -57,6 +62,12 @@ Situation in 2014
 * IE6/7 dead (cheer!)
 * IE8 usage is around 1 in 20 (unless you're unlucky)
 * jQuery 2 has dropped IE6/7/8 support
+* write less, do more - perhaps a few years ago, but not necessarily now
+
+
+JavaScript is cool
+Naked JavaScript makes you even cooler
+But there are misconceptions...
 
 Are we using jQuery as a crutch or out of habit rather than because it's necessary?
 
