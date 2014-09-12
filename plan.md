@@ -30,18 +30,14 @@ I love jQuery - show jQuery video image and link
 Why jQuery has been so successful?
 ----------------------------------
 
-Ask question: what percentage of sites is jQuery used?
+jQuery arrived at the right time.
 
-* Top 10K sites: 77.8% use jQuery
-* Top 100K: 67.2%
-* Top 1 million: 58.9%
+In 2006, Ajax was new and everyone was starting to created client-side heavy apps such as Google Maps. But:
 
-SOURCE: http://trends.builtwith.com/javascript/jQuery
-
-* browsers are buggy and too inconsistent
-* JavaScript is too hard, too strange
-* jQuery is like a high-level language, JavaScript is like assembly
-* job adverts ask for jQuery rather than JavaScript
+* the browsers were buggy and too inconsistent
+* JavaScript was too hard, too strange
+* DOM manipulation was weird and difficult
+* jQuery was only 30Kb (minified and gzipped)
 
 Venn diagram (SVG):
 browsers, DOM models, APIs, event model, CSS support, box models
@@ -51,7 +47,28 @@ In 2007, smartphones arrived
 
 jQuery in middle
 
-jQuery's only 30Kb so why should we even worry?
+Ask question: what percentage of sites is jQuery used?
+
+* Top 10K sites: 77.8% use jQuery
+* Top 100K: 67.2%
+* Top 1 million: 58.9%
+
+SOURCE: http://trends.builtwith.com/javascript/jQuery
+
+jQuery use exploded
+Even job adverts ask for jQuery rather than JavaScript
+
+
+jQuery the good parts
+---------------------
+
+* DOM node retrival using CSS selectors (Sizzle)
+* method chaining - consistent API
+* cross-browser support
+* great documentation
+* shallow learning curve for new developers
+* covers core HTML APIs: DOM traversal, manipulation, events, Ajax, animation
+
 
 Situation in 2014
 -----------------
@@ -62,15 +79,42 @@ Situation in 2014
 * IE6/7 dead (cheer!)
 * IE8 usage is around 1 in 20 (unless you're unlucky)
 * jQuery 2 has dropped IE6/7/8 support
+
+
+jQuery the bad parts
+--------------------
+[Show next to good parts]
+
+* DOM node retrival using CSS selectors - complex selects
+* method chaining - multiple loops
+* cross-browser support - do you need to support every weird browser?
+* "just use jQuery" documentation is ubiquitous
+* shallow learning curve for new developers - do stuff without thinking
+* only covers core APIs: no access to new HTML5 ones. Bad if you depend on jQuery
+
+
+jQuery misconceptions...
+------------------------
+
 * write less, do more - perhaps a few years ago, but not necessarily now
-
-
-JavaScript is cool
-Naked JavaScript makes you even cooler
-But there are misconceptions...
+* jQuery is perfect - not. Bugs, abstracts JS so fixing stuff is hard
+* jQuery is essential for cross-browser development
+* jQuery is not really 30Kb.
+* jQuery is like a high-level language, JavaScript is like assembly
+* isn't necessary to know JS because jQuery exists
 
 Are we using jQuery as a crutch or out of habit rather than because it's necessary?
 
+
+The proof
+---------
+Raw JavaScript is:
+* cool
+* not necessarily harder
+* significantly faster
+* can be used in places which aren't browser centric (Node, phones, devices)
+
+Run naked and run free
 
 Selectors
 ---------
@@ -88,6 +132,18 @@ document.getElementById(".myclass");
 document.getElementsByClassName(".myclass");
 document.getElementsByTagName(".myclass");
 live collection - can also be applied to other nodes (not just document)
+
+Performance:
+http://jsperf.com/digpen-dom-selector-test
+
+Took 500 lines of HTML from digpen.com.
+Selected all speaker names from the programme section
+
+jQuery - 14,600 Chrome, 5,300 Firefox
+querySelectorAll - 17,500 Chrome (20% faster), 5,800 Firefox (9% faster)
+getElementsByClassName - 9,041,500 Chrome (620x faster), 1,151,399,600 Firefox (220,000x faster!)
+
+Admittedly, you don't normally do thousands of hundreds selections per page but it illustrates the difference.
 
 
 DOM manipulation
