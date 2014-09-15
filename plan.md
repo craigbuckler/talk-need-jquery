@@ -139,9 +139,9 @@ http://jsperf.com/digpen-dom-selector-test
 Took 500 lines of HTML from digpen.com.
 Selected all speaker names from the programme section
 
-jQuery - 14,600 Chrome, 5,300 Firefox
-querySelectorAll - 17,500 Chrome (20% faster), 5,800 Firefox (9% faster)
-getElementsByClassName - 9,041,500 Chrome (620x faster), 1,151,399,600 Firefox (220,000x faster!)
+jQuery - 16,250 Chrome, 5,300 Firefox, 4,600 IE11
+querySelectorAll (IE8+) - 18,600 Chrome (14% faster), 6,100 Firefox (15% faster), 5,200 IE (13%)
+getElementsByClassName (IE9+) - 3,804,000 Chrome (234x faster), 4,730,000 Firefox (892x faster!), IE 730,000 (159x)
 
 Admittedly, you don't normally do thousands of hundreds selections per page but it illustrates the difference.
 
@@ -163,6 +163,9 @@ Forget jQuery. Forget native JavaScript. CSS3 wins
 
 There are exceptions, but they're just that - exceptions. The standard bouncing, fading, scrolling effects will almost certainly be quicker in CSS3.
 
+Velocity: http://velocityjs.org/
+GSAP: http://greensock.com/gsap
+
 
 Chaining inefficiency
 ---------------------
@@ -175,9 +178,6 @@ Events
 
 Ajax
 ----
-
-
-
 
 
 Reasons to retain jQuery
