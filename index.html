@@ -14,48 +14,784 @@
 <!--[if lt IE 9]>
 <script src="lib/js/html5shiv.js"></script>
 <![endif]-->
+<style>
+.reveal .hide { display: none; }
+.reveal .dim { color: #888; }
+.reveal h1 { margin-bottom: 0.3em; }
+.reveal section img.noback { background-color: transparent; border: 0 none; box-shadow: none; }
+.reveal section p.left { text-align: left; }
+.reveal table { margin: 2em auto; }
+.reveal table.grid, .reveal table.grid td { padding: 5px 10px; border: 1px solid #666; border-collapse: collapse; }
+.reveal table.tests th, .reveal table.tests td { width: 25%; text-align: right; }
+.reveal td strong, .reveal table.tests td span { color: #ff0; }
+</style>
 </head>
 <body>
 
 <div class="reveal"><div class="slides">
 
-	<section>
-		<h1>Do you really<br />need jQuery?</h1>
+  <section>
+    <h1>Do you really<br />need jQuery?</h1>
 
-		<br />
+    <h2>By Craig Buckler</h2>
+    <p>
+      <a href="http://twitter.com/craigbuckler">@craigbuckler</a><br />
+      <a href="http://craigbuckler.com/">craigbuckler.com</a><br />
+      <a href="http://www.sitepoint.com/">SitePoint.com</a><br />
+    </p>
 
-		<h3>By Craig Buckler</h3>
-		<p>
-            <a href="http://twitter.com/craigbuckler">@craigbuckler</a>
-			<a href="http://craigbuckler.com/">craigbuckler.com</a><br />
-            <a href="http://www.sitepoint.com/">SitePoint.com</a><br />
-		</p>
+    <aside class="notes">
 
-		<aside class="notes">
+      <p>Hello! My name's Craig Buckler and I'm a freelance web consultant from Devon.</p>
 
-			<p>Hello! My name's Craig Buckler and I'm a freelance web consultant from Devon.</p>
+      <p>I'm a full-stack developer I primarily concentrate on front-end work as well as:</p>
 
-			<p>I'm primarily a front-end coder but get my hands dirty with:</p>
+      <ul>
+        <li>writing for SitePoint</li>
+        <li>creating training videos</li>
+        <li>talking at conferences</li>
+        <li>prostituting myself to whoever wants me</li>
+      </ul>
 
-			<ul>
-				<li>back-end coding</li>
-				<li>creating training videos</li>
-				<li>talking at conferences</li>
-				<li>writing for SitePoint</li>
-				<li>prostituting myself around to whoever wants me</li>
-			</ul>
-		</aside>
+      <p>You can find me on the usual websites, social networks and GitHub with the imaginative ID 'craigbuckler'.</p>
 
-	</section>
+      <p>My name's fairly distinct so you shouldn't have too much trouble.</p>
+    </aside>
 
-	<section>
-        <h1>Thank you<br />for watching</h1>
+  </section>
 
-        <p><a href="http://tinyurl.com/digpen-need-jquery">tinyurl.com/digpen-need-jquery</a></p>
-        <img src="assets/images/qrcode.png" width="30%" />
-        <p>Any questions?&hellip;</p>
 
-	</section>
+  <section>
+    <h1>Question&hellip;</h1>
+
+    <h2>Do you use jQuery?</h2>
+
+    <h2 class="fragment">Do you use jQuery in every project?</h2>
+
+    <img src="assets/images/jquery.png" alt="jQuery" class="noback" />
+
+    <aside class="notes">
+
+      <p>First, I'd like some idea how many of you use jQuery.</p>
+
+      <p>So hands up all developers who do some amount of front-end work.</p>
+
+      <p>Keep your hand up if you use jQuery?</p>
+
+      <p>{NEXT} Keep your hand up if you use jQuery in every project.</p>
+
+      <p>Ooo, this could be a tough crowd.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>We'll discuss&hellip;</h1>
+
+    <ul>
+      <li>what jQuery is</li>
+      <li class="fragment">why it became popular</li>
+      <li class="fragment">whether you need it in your next project</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+    <h1>But we won't</h1>
+
+    <p>bash jQuery</p>
+
+    <aside class="notes">
+
+      <p>It's trendy to moan about jQuery but I want to be clear that I still love the library and there are situations when it can be very useful.</p>
+
+      <p>in fact, I love it so much...</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Shameless plug</h1>
+
+    <img src="assets/images/jquery-course.png" alt="jQuery course" class="noback" style="width:300px;" />
+
+    <p><a href="http://tinyurl.com/jquery-course">tinyurl.com/jquery-course</a></p>
+
+    <aside class="notes">
+
+      <p>that I even created a jQuery video course which is available from all good online training stores</p>
+
+      <p>and probably some bad stores too</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>What is jQuery?</h1>
+
+    <ul>
+      <li class="fragment">a library written in JavaScript&hellip;</li>
+      <li class="fragment">&hellip;to help browser-based JavaScript development</li>
+    </ul>
+
+    <aside class="notes">
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>jQuery is not&hellip;</h1>
+
+    <ul>
+      <li class="fragment">a language</li>
+      <li class="fragment">essential</li>
+    </ul>
+
+    <aside class="notes">
+
+      <p>It's not</p>
+
+      <p>A language in it's own right. jQuery syntax is JavaScript syntax. It has a slightly different approach in some respects but it's still JavaScript below the surface.</p>
+
+      <p>Essential. jQuery like any JavaScript language or framework may help you write code but that functionality can still be implemented without jQuery should you choose to do so.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Why we use jQuery?</h1>
+
+    <p class="left">In 2006:</p>
+
+    <ul>
+      <li>client-side heavy applications were new</li>
+
+      <li class="fragment">but development was tough<br />
+        <img src="assets/images/ie-error.png" alt="IE error" />
+      </li>
+
+      <li class="fragment">browsers were buggy and inconsistent</li>
+      <li class="fragment">for many, JavaScript was new and strange</li>
+    </ul>
+
+    <aside class="notes">
+
+      <p>So let's look at the history of jQuery.</p>
+
+      <p>In 2006, developers had a renewed interest in client-side browser applications. Ajax techniques were increasingly popular and were being used by applications such as GMail and Google Maps.</p>
+
+      <p>Browsers were starting to offer desktop-like functionality and speed</p>
+
+      <p>{NEXT} But behind the scenes, browsers were a hostile environment.</p>
+
+      <p>Microsoft had abandoned Internet Explorer which was still the most-used application. There were very few tools and the best you could hope for was cryptic messages like this.</p>
+
+      <p>{NEXT} we had a couple of competing browsers such as Firefox and Opera, but these adopted W3C standards which weren't necessarily compatible with IE</p>
+
+      <p>{NEXT} and to many developers coming from backend or desktop languages, JavaScript seemed very weird and difficult</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>JavaScript libraries</h1>
+
+    <img src="assets/images/js-library.svg" alt="JavaScript library" class="noback" />
+
+    <aside class="notes">
+
+      <p>Now don't forget it's not just a handful of desktop browsers developers are trying to support. The iPhone arrived in 2007 and Android appeared soon after. Each has different browsers, different APIs and different bugs.</p>
+
+      <p>So soon, developers were creating functions which helped get around the browser differences in language support, the document object model, event objects, XMLHttpRequest and more.</p>
+
+      <p>These functions were then wrapped into into libraries which offered a more consistent development platform. We soon saw the rise of projects such as Prototype, MooTools and YUI.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>The rise of jQuery</h1>
+
+    <pre><code>// a single object for everything
+$;</code></pre>
+
+    <pre class="fragment"><code>// CSS selector syntax
+$("#main-section p.name");</code></pre>
+
+    <pre class="fragment"><code>// concise method chaining
+$("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre>
+
+    <aside class="notes">
+
+      <p>jQuery arrived quite late to the party but John Resig - it's developer - learned from the other JavaScript libraries which had started to become increasingly large and cumbersome. He devised a number of elegant features.</p>
+
+      <p>jQuery offered a single object - the dollar sign. It was simple.</p>
+
+      <p>{NEXT} next, you could select DOM nodes using CSS selectors. This may seem quite obvious now but it was revolutionary at the time.</p>
+
+      <p>{NEXT} and it also offered method chaining. Most jQuery method return the jQuery object itself which means it can be passed into another method.</p>
+
+      <p>So here we're selecting a number of HTML elements, setting the text to "Hello", adding a class, and running a slideDown animation. It's concise and very readable.</p>
+
+      <p>This made jQuery phenominally successful. Even web development job vacancies started requesting jQuery skills over and above JavaScript itself.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>jQuery usage in 2014</h1>
+
+    <p>How many websites use jQuery now?</p>
+
+    <table>
+      <tr><td>top million websites</td><td><strong class="fragment">59.1%</strong></td></tr>
+      <tr class="fragment"><td>top 10,000 websites</td><td><strong class="fragment">77.2%</strong></td></tr>
+      <tr class="fragment"><td>proportion of usage</td><td><strong class="fragment">94.3%</strong></td></tr>
+    </table>
+
+    <p>sources: <a href="http://trends.builtwith.com/javascript/jQuery">BuiltWith.com</a> and <a href="http://w3techs.com/">w3techs.com</a></p>
+
+    <aside class="notes">
+
+      <p>How successful?</p>
+
+      <p>If we take the top 1 million websites according to traffic volumes, how many do you think use jQuery?</p>
+
+      <p>{NEXT} it's almost 60 percent</p>
+
+      <p>{NEXT} so what about the top 10,000 websites? Any guesses?</p>
+
+      <p>{NEXT} it rises to almost 80%</p>
+
+      <p>{NEXT} finally, what if we look at all sites and find those using some type of JavaScript library. What proportion of those use jQuery? Anyone?</p>
+
+      <p>{NEXT} it's 94.3 percent. jQuery wins. Everyone else might as well give up.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>jQuery:</h1>
+
+    <table class="grid">
+      <tr><td><h2>the good parts</h2></td><td class="hide"><h2>the bad parts</h2></td></tr>
+      <tr><td class="fragment">CSS selectors</td><td class="hide">CSS selectors</td></tr>
+      <tr><td class="fragment">method chaining</td><td class="hide">method chaining</td></tr>
+      <tr><td class="fragment">cross-browser support</td><td class="hide">cross-browser support</td></tr>
+      <tr><td class="fragment">shallow learning curve</td><td class="hide">shallow learning curve</td></tr>
+      <tr><td class="fragment">great documentation</td><td class="hide">great documentation</td></tr>
+      <tr><td class="fragment">covers core APIs</td><td class="hide">covers core APIs</td></tr>
+    </table>
+
+    <aside class="notes">
+
+      <p>So let's look at the good parts of jQuery.</p>
+
+      <p>{NEXT} selecting DOM nodes using CSS selectors was inspired. jQuery's Sizzle selector engine is generally more advanced than that offered by the browser vendors.</p>
+
+      <p>{NEXT} method chaining offers a consistent and easy to read API</p>
+
+      <p>{NEXT} you rarely worry about cross-browser support - jQuery works everywhere</p>
+
+      <p>{NEXT} most people can string a few methods together and do something useful</p>
+
+      <p>{NEXT} the online documentation is great and you'll find answers everywhere</p>
+
+      <p>{NEXT} it covers the core browser APIs: dom traversal, node manipulation, event handling, Ajax and animation</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>The Web in 2014</h1>
+
+    <ul>
+      <li class="fragment">IE6 and IE7 are dead!</li>
+      <li class="fragment">IE8 is dying rapidly</li>
+      <li class="fragment">IE has (mostly) caught up</li>
+      <li class="fragment">all vendors have adopted HTML5 standards</li>
+      <li class="fragment">the top browsers are closer than ever&hellip;</li>
+      <li class="fragment">&hellip;even on mobile</li>
+      <li class="fragment">vendors are copying useful jQuery functions</li>
+    </ul>
+
+    <aside class="notes">
+
+      <p>but the web has changed a lot since jQuery arrived in 2006.</p>
+
+      <p>{NEXT} first, IE6 and 7 are rarely a problem any longer</p>
+
+      <p>{NEXT} unless you're unlucky, IE8 usage has dropped below 1 in 20 users for most sites and the browser is rarely problematic compared to its predecessors</p>
+
+      <p>You should also be aware that jQuery 2 has dropped support for IE8 and below.</p>
+
+      <p>{NEXT} you may not believe me but IE11 is a good browser. It's fast and won't give you any more problems than any other browser. IE9 and 10 are fine too; they're just missing support for lesser-used APIs</p>
+
+      <p>{NEXT} all the vendors are working together to ensure compatibility. It doesn't always work but...</p>
+
+      <p>{NEXT} the top applications are close than they've ever been</p>
+
+      <p>{NEXT} and that includes mobile devices which now offer very capable browsers</p>
+
+      <p>{NEXT} and finally, the vendors understand the popularity of jQuery and have started to add similar useful APIs</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>jQuery:</h1>
+
+    <table class="grid">
+      <tr><td class="dim"><h2>the good parts</h2></td><td><h2>the bad parts</h2></td></tr>
+      <tr><td class="dim">CSS selectors</td><td class="fragment">CSS selectors</td></tr>
+      <tr><td class="dim">method chaining</td><td class="fragment">method chaining</td></tr>
+      <tr><td class="dim">cross-browser support</td><td class="fragment">cross-browser support</td></tr>
+      <tr><td class="dim">shallow learning curve</td><td class="fragment">shallow learning curve</td></tr>
+      <tr><td class="dim">great documentation</td><td class="fragment">great documentation</td></tr>
+      <tr><td class="dim">covers core APIs</td><td class="fragment">covers core APIs</td></tr>
+    </table>
+
+    <aside class="notes">
+
+      <p>So the problems jQuery solved for us 8 years ago don't necessarily exist today. Let's look at the bad parts...</p>
+
+      <p>{NEXT} browser vendors have implemented a methods named querySelector and querySelectorAll which fetch nodes using CSS selectors. It's even supported in IE8. So it's a native implementation and jQuery will use it if it's available. But that can mean jQuery adds an unncecessary overhead.</p>
+
+      <p>{NEXT} chaining looks cool until you realise that almost every method in that chain is looping through every node. That can be inefficient since a single loop could do the same work.</p>
+
+      <p>{NEXT} first, jQuery doesn't support every browser. If you come up against a problem with  a specific device, it's incredibly difficult to fix jQuery - you have to report a bug and hope the team will take it seriously.</p>
+
+      <p>Next problem ... and I think you can see where I'm going with this!</p>
+
+      <p>{NEXT} the shallow learning curve allows you do things which are specatularly inefficient but they work. But jQuery hides much of the implementation from you so it's not always obvious something is wrong.</p>
+
+      <p>{NEXT} jQuery's documentation is ubiquitous. If you ask a question about a specific JavaScript issue on StackOverflow, 99 times out of 100 you'll get the answer "seriously dude, just use jQuery". That's not necessarily useful.</p>
+
+      <p>{NEXT} finally, jQuery covers the core APIs only. These are all consistent in modern browsers so we don't need so much assistance. But there are dozens of other advanced HTML5 APIs jQuery doesn't help you with.</p>
+
+      <p>If you're totally reliant on jQuery, you may struggle to use a new API because your crutch has been kicked away.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>jQuery Misconceptions</h1>
+
+    <ul>
+      <li class="fragment">jQuery is perfect</li>
+      <li class="fragment">write less, do more</li>
+      <li class="fragment">jQuery is only 30Kb</li>
+      <li class="fragment">jQuery is a high-level language</li>
+      <li class="fragment">learning JavaScript isn't necessary</li>
+    </ul>
+
+    <p class="fragment"><br /><em>Are we using jQuery out of habit rather than necessity?</em></p>
+
+    <aside class="notes">
+
+      <p>Because jQuery has been so useful it's led to several misconceptions about it and JavaScript in general.</p>
+
+      <p>{NEXT} jQuery is not perfect - it has bugs and issues like any other project. It is generally robust, but fully depending on it isn't necessarily wise.</p>
+
+      <p>{NEXT} this is jQuery's catchphrase but it's not necessarily true these days. If you're doing something reasonabily complex, jQuery won't always mean less code.</p>
+
+      <p>{NEXT} minified and gzipped jQuery is only 32K. That's nothing when compared with an image.</p>
+
+      <p>But it's important to realise the actual source is nearer 300K and it has a processing overhead. You're unlikely to be using more than a fraction of jQuery's functionality yet all that code is referenced in every object you create.</p>
+
+      <p>{NEXT} I've heard this a few times. JavaScript is considered to be some sort of low-level assembly language which jQuery somehow makes usable. It's nonsense; jQuery is written in JavaScript and covers a very small subset of functionality.</p>
+
+      <p>{NEXT} finally, the classic: "learning JavaScript isn't necessary because jQuery exists". </p>
+
+      <p>It's strange that many web developers actively avoid learning JavaScript. But remember, jQuery won't always help you leverage new HTML5 APIs. Nor will it help write programs in other environments.</p>
+
+      <p>And don't forget that jQuery may not be around forever. Ask any YUI developer...</p>
+
+      <p>{NEXT} So are we using jQuery - or indeed any JavaScript library - out of habit rather than necessity? I've certainly been guilty of that.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Raw JavaScript</h1>
+
+    <ul>
+      <li class="fragment">has become considerably easier</li>
+      <li class="fragment">has become cool (again)</li>
+      <li class="fragment">it's considerably faster</li>
+    </ul>
+
+    <aside class="notes">
+
+      <p>So let's look at the benefits of raw JavaScript.</p>
+
+      <p>{NEXT} the core browser APIs are consistent and oldIEs have mostly died so it's far easier than it used to be.</p>
+
+      <p>{NEXT} everyone's jumping on the JavaScript bandwagon. It's can be used in places outside the browser such as server-side Node.js, operating systems such as Chrome and Firefox OS, and even on embedded systems.</p>
+
+      <p>{NEXT} and finally, it's fast. Far faster than using jQuery which contains fallback code for obsolete devices and other internal jQuery code.</p>
+
+      <p>Performance is increasingly important. How many people are working on websites with responsive web designs? It's everyone.</p>
+
+      <p>We'll spend many development hours making a site design responsive but put little effort into performance. So the design may be responsive but the user experience won't be.</p>
+
+      <p>So let's look at the gains you can make by stripping off your jQuery shackles and running naked through the JavaScript world!</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Selector test</h1>
+
+    <p><a href="http://jsperf.com/digpen-dom-selector-test/3">TEST</a>: find elements containing Digpen speaker names:</p>
+
+    <pre><code class="javascript">// 1: jQuery
+$("#programme .name");
+
+// 2: querySelectorAll (IE8+)
+document.querySelectorAll("#programme .name");
+
+// 3: getElementsByClassName (IE9+)
+document.getElementById("programme").getElementsByClassName("name");</code></pre>
+
+    <table class="tests fragment">
+      <tr><th>test (ops/sec)</th><th>Chrome 37</th><th>Firefox 32</th><th>IE11</th></tr>
+      <tr><td>jQuery</td><td>16,250</td><td>5,300</td><td>4,600</td></tr>
+      <tr class="fragment"><td>querySelectorAll</td><td>18,600 <span>(+14%)</span></td><td>6,100 <span>(+15%)</span></td><td>5,200 <span>(+13%)</span></td></tr>
+      <tr class="fragment"><td>ByTagName</td><td>3.8m <span>(234x)</span></td><td>4.7m <span>(892x)</span></td><td>730K <span>(159x)</span></td></tr>
+    </table>
+
+    <aside class="notes">
+
+      <p>For all these tests I've taken around 500 lines of HTML code from digpen.com and run various JavaScript tests at jsperf.com.</p>
+
+      <p>So we're going to find all Digpen speaker names by finding the elements with a class of 'name' within the section with the id 'programme'.</p>
+
+      <p>{NEXT} So here are the results for jQuery as a number of operations per second. I used a mid-range Windows 8.1 PC and I also verified Chrome and Firefox on a Mac.</p>
+
+      <p>{NEXT} So if we use querySelectorAll, we get a 15% performance boost. It's not huge but that's primarily because jQuery uses querySelectorAll when it's available.</p>
+
+      <p>But can anyone guess how much faster getElementsByClassName will be?</p>
+
+      <p>{NEXT} It's hundreds of times faster. Almost 1,000 times faster on Firefox. My initial reaction was that I'd done some shonky testing code but I've verified it and it's all producing the same output.</p>
+
+      <p>Undoubtedly the browsers are caching results and the figures will differ across pages, platforms and applications. You're also unlikely to be doing such intensive node selection but it illustrates just how fast raw JavaScript can be.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Class manipulation</h1>
+
+    <p><a href="http://jsperf.com/digpen-class-manipulation">TEST</a>: add two classes, toggle one &amp; remove other on all LI's</p>
+
+    <pre><code class="javascript">// 1: jQuery single
+$li.addClass("test1"); $li.addClass("test2");
+$li.toggleClass("test2"); $li.removeClass("test1");</code></pre>
+
+    <pre class="fragment"><code class="javascript">// 2: jQuery chain
+$li.addClass("test1").addClass("test2").toggleClass("test2").removeClass("test1");</code></pre>
+
+    <pre class="fragment"><code class="javascript">// 3: classList API, multiple loops
+for (i = 0; i &lt; li.length; i++) { li[i].classList.add("test1"); }
+for (i = 0; i &lt; li.length; i++) { li[i].classList.add("test2"); }
+for (i = 0; i &lt; li.length; i++) { li[i].classList.toggle("test2"); }
+for (i = 0; i &lt; li.length; i++) { li[i].classList.remove("test1"); }</code></pre>
+
+    <pre class="fragment"><code class="javascript">// 4: classList API, single loop
+for (i = 0; i &lt; li.length; i++) {
+  li[i].classList.add("test1");
+  li[i].classList.add("test2");
+  li[i].classList.toggle("test2");
+  li[i].classList.remove("test1");
+}</code></pre>
+
+    <aside class="notes">
+
+      <p>In the next test we're going to modify the styles of all list elements on the page by adding two class names, toggling one and removing the other.</p>
+
+      <p>Adding, removing and modifying class names is something you do regularly when building client-side applications.</p>
+
+      <p>In all these tests the selected nodes have been cached so there shouldn't be an overhead in finding that collection.</p>
+
+      <p>{NEXT} for the first test, we'll run jQuery methods as separate commands.</p>
+
+      <p>{NEXT} this will probably be improved if we chain the methods together.</p>
+
+      <p>{NEXT} in the next test, we're going to use the new classList API which is available in IE10 upwards and offers similar add, remove and toggle methods.</p>
+
+      <p>We don't have the benefit of jQuery doing the looping for us, so we'll do four loops - one for each class change we're making.</p>
+
+      <p>{NEXT} and in the final test, we'll still use the classList API but do everything in a single loop which you'd expect to be faster.</p>
+
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Class manipulation</h1>
+
+    <table class="tests">
+      <tr><th>test (ops/sec)</th><th>Chrome 37</th><th>Firefox 32</th><th>IE11</th></tr>
+
+      <tr><td>jQuery single</td><td>1,650</td><td>390</td><td>620</td></tr>
+
+      <tr><td>jQuery chain</td><td>1,610</td><td>390</td><td>600</td></tr>
+
+      <tr class="fragment"><td>4 classList loops</td><td>2,060 <span>(+24%)</span></td><td>820 <span>(2.1x)</span></td><td>1,000 <span>(+60%)</span></td></tr>
+
+      <tr class="fragment"><td>1 classList loop</td><td>2,920 <span>(+26%)</span></td><td>600 <span>(+54%)</span></td><td>1,100 <span>(+77%)</span></td></tr>
+    </table>
+
+    <aside class="notes">
+
+      <p>So for the results for jQuery in operations per second show very little difference between running multiple or chained methods. Interestingly, Firefox seems quite slow at class name handling.</p>
+
+      <p>{NEXT} but even if you run individual loops with the classList API, you can expect a performance gain of 25% - or twice as fast on Firefox.</p>
+
+      <p>One of the reasons for this boost is because jQuery doesn't use the classList API itself and it determines which classes need to be added and removed using string analysis and concatenation.</p>
+
+      <p>{NEXT} If we look at the single loop, we get a small boost on all browsers except Firefox which, for some reason, appears to prefer multiple loops!</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Text change test</h1>
+
+    <p><a href="http://jsperf.com/digpen-text-changing">TEST</a>: change all speaker names</p>
+
+    <pre><code class="javascript">// 1: jQuery
+$name.text("Someone Else");
+$name.text("Another Person");
+
+// 2: textContent (IE9)
+for (var i = 0; i &lt; name.length; i++) {
+  name[i].textContent = "Someone Else";
+  name[i].textContent = "Another Person";
+}</code></pre>
+
+    <table class="tests fragment">
+      <tr><th>test (ops/sec)</th><th>Chrome 37</th><th>Firefox 32</th><th>IE11</th></tr>
+
+      <tr><td>jQuery</td><td>3,710</td><td>2,340</td><td>238</td></tr>
+
+      <tr class="fragment"><td>textContent</td><td>9,740 <span>(2.6x)</span></td><td>12,280 <span>(5.2x)</span></td><td>1,038 <span>(4.4x)</span></td></tr>
+    </table>
+
+    <aside class="notes">
+
+      <p>In the next test we're changing the text of all the speaker names.</p>
+
+      <p>The first test uses jQuery's text method.</p>
+
+      <p>The second test requires our own loop but runs the node textContent method which is available in IE9 and above.</p>
+
+      <p>{NEXT} so first we have the jQuery results. IE's performance is very slow.</p>
+
+      <p>{NEXT} but by using textContent, it'll be up at least twice as fast. In fact, it allows Firefox to overtake Chrome's performance.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>DOM change test</h1>
+
+    <p><a href="http://jsperf.com/digpen-dom-node-insertion">TEST</a>: add and remove a child node from all speaker names</p>
+
+    <pre><code class="javascript">// 1: jQuery
+$name.append("&lt;strong&gt;confirmed&lt;strong&gt;");
+$("strong", $name).remove();
+
+// 2: DOM methods
+var i, newelement = document.createElement("strong");
+newelement.appendChild(document.createTextNode("confirmed"));
+for (i = 0; i &lt; name.length; i++) { name[i].appendChild(newelement.cloneNode(true)); }
+for (i = 0; i &lt; name.length; i++) { name[i].removeChild(name[i].lastChild); }
+}</code></pre>
+
+    <table class="tests fragment">
+      <tr><th>test (ops/sec)</th><th>Chrome 37</th><th>Firefox 32</th><th>IE11</th></tr>
+
+      <tr><td>jQuery</td><td>3,050</td><td>2,000</td><td>310</td></tr>
+
+      <tr class="fragment"><td>textContent</td><td>6,260 <span>(2x)</span></td><td>8,880 <span>(4.4x)</span></td><td>490 <span>(+59%)</span></td></tr>
+    </table>
+
+    <aside class="notes">
+
+      <p>In the next test we're going to add a child node to all speakers to show they're confirmed.</p>
+
+      <p>This is quite simple in jQuery.</p>
+
+      <p>For the native test, I used fairly clunky DOM creation methods rather than innerHTML which is normally faster and is what jQuery uses. I also used two loops with element cloning and child node removal.</p>
+
+      <p>{NEXT} jQuery's results are similar to the text change with IE's performance being slow again.</p>
+
+      <p>{NEXT} but despite all this horrible node code, the native JavaScript is considerably faster - you can expect gains to be twice as fast.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Performance gains</h1>
+
+    <p class="left">Similar gains can be made for:</p>
+
+    <ul>
+      <li class="fragment">arrays and forEach loops</li>
+      <li class="fragment">event handling</li>
+      <li class="fragment">Ajax</li>
+    </ul>
+
+    <div class="fragment">
+    <p class="left"><br />The exception:</p>
+    <h2>animations</h2>
+    </div>
+
+
+    <aside class="notes">
+
+      <p>These gains will be repeated elsewhere</p>
+
+      <p>{NEXT} you can use forEach rather than jQuery's each method</p>
+
+      <p>and you may be able to use new array methods such as map and every rather than the simple loops I used in the tests above</p>
+
+      <p>{NEXT} event handling is consistent across browsers so you won't need jQuery's overhead to handle it</p>
+
+      <p>{NEXT} and similarly, jQuery's Ajax handling is quite complex because it caters for every type of transport and data type. You're unlikely to require them all and, if you target IE10 and above you can use XMLHttpRequest2 which has advanced methods for things like progress bars and resumed uploads which aren't supported by jQuery.</p>
+
+      <p>There's only one exception I'd make in all this.</p>
+
+      <p>{NEXT} Animations</p>
+
+      <p>jQuery offers simple slides, fades and scrolling. They work in all browsers, but really - forget jQuery and JavaScript - just use CSS3 animations and transformations.</p>
+
+      <p>If you're doing something simple like jQuery does, CSS3 will be faster and use less resources than whatever you come up with. You can also add effects such as rotation and 3D transformations which you could never hope to do in JavaScript alone.</p>
+
+      <p>Now CSS3 animations are simplistic but they're good enough for 99% of the effects we need.</p>
+
+      <p>They don't offer the fine-grained frame control you need for something like action games, but if you need fast animation, you shouldn't be using a general-purpose library like jQuery. Use something like Velocity or GSAP instead.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Reasons to retain jQuery</h1>
+
+    <ul>
+      <li class="fragment">legacy applications</li>
+      <li class="fragment">where IE6/7 support is required</li>
+      <li class="fragment">projects using lots of jQuery functionality</li>
+      <li class="fragment">quick and dirty projects or prototypes</li>
+      <li class="fragment">large teams with varying client-side skills</li>
+    </ul>
+
+
+    <aside class="notes">
+
+      <p>OK, so I'm never going to say you should never use jQuery. It's a great library and you should certainly consider it for every project.</p>
+
+      <p>{NEXT} there's little point ripping it out of legacy applications unless you have a serious performance issue</p>
+
+      <p>{NEXT} if you absolutely have to support IE6 and 7, well, I pity you. But using jQuery will help - just remember to stick with version 1 rather than version 2.</p>
+
+      <p>There's some argument to say it could be used for IE8 but my personal preference is to make IE8 work but not worry if it falls back to a lesser functionality</p>
+
+      <p>{NEXT} projects where you're using a high proportion of jQuery functionality; that's all the DOM methods, every Ajax type, animations in IE8. That said, I'm yet to come across a project that does.</p>
+
+      <p>{NEXT} there's no harm using it for throwaway prototypes where performance isn't an issue. You might also want to use it where the client wants something cheap and quick rather than good ... although working on that kind of project is soul destroying</p>
+
+      <p>{NEXT} large teams with varying skills is another possibility. But be careful not to choose it because it's the safe option.</p>
+
+      <p>You might be better to train staff or, ahem, hire a freelance client-side consultant.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>jQuery alternatives</h1>
+
+    <ul>
+      <li><a href="http://zeptojs.com/">Zepto.js</a> - 9Kb</li>
+      <li><a href="http://minifiedjs.com/">Minified.js</a> - 4Kb to 8Kb</li>
+      <li><a href="https://github.com/remy/min.js">min.js</a> - 600 bytes</li>
+      <li>or create a specific, modular build of jQuery</li>
+    </ul>
+
+
+    <aside class="notes">
+
+      <p>If you love jQuery's selector and method chaining syntax and don't want to write your own raw JavaScript, there are some micro-libraries which mimic jQuery without the bulk of stuff you never need</p>
+
+      <p>min.js works by wrapping querySelectorAll and event handlers in a wrapper which looks jQuery like</p>
+
+      <p>and even jQuery itself offers custom builds so you could, for example, leave of animation methods if you've swithed to CSS3.</p>
+
+      <p>The only downside is that plugins could fail if they depended on those methods.</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Thank you<br />for watching</h1>
+
+    <p><a href="http://tinyurl.com/digpen-need-jquery">tinyurl.com/digpen-need-jquery</a></p>
+    <img src="assets/images/qrcode.png" style="width:30%" alt="QR code" />
+    <p>Any questions?&hellip;</p>
+
+    <aside class="notes">
+
+    <p>Thank you for watching</p>
+
+    </aside>
+
+  </section>
 
 </div></div>
 
@@ -63,20 +799,22 @@
 <script src="js/reveal.min.js"></script>
 <script>
 Reveal.initialize({
-	controls: false,
-	progress: true,
-	history: true,
-	center: true,
-	theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-	transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
-	dependencies: [
-		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-		{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-		{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-		{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-	]
+  width: 1024,
+  height: 768,
+  controls: false,
+  progress: true,
+  history: true,
+  center: true,
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
 });
 </script>
 </body>

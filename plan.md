@@ -6,7 +6,6 @@ sources:
 
 * http://youmightnotneedjquery.com/
 
-write jsperf.com tests
 
 Introduction
 ============
@@ -34,7 +33,7 @@ jQuery arrived at the right time.
 
 In 2006, Ajax was new and everyone was starting to created client-side heavy apps such as Google Maps. But:
 
-* the browsers were buggy and too inconsistent
+* the browsers were buggy and too inconsistent (IE image)
 * JavaScript was too hard, too strange
 * DOM manipulation was weird and difficult
 * jQuery was only 30Kb (minified and gzipped)
@@ -98,7 +97,7 @@ jQuery misconceptions...
 
 * write less, do more - perhaps a few years ago, but not necessarily now
 * jQuery is perfect - not. Bugs, abstracts JS so fixing stuff is hard
-* jQuery is essential for cross-browser development
+* jQuery is essential for cross-browser development (jQ2 is IE9+)
 * jQuery is not really 30Kb.
 * jQuery is like a high-level language, JavaScript is like assembly
 * isn't necessary to know JS because jQuery exists
@@ -109,10 +108,11 @@ Are we using jQuery as a crutch or out of habit rather than because it's necessa
 The proof
 ---------
 Raw JavaScript is:
-* cool
+
 * not necessarily harder
 * significantly faster
-* can be used in places which aren't browser centric (Node, phones, devices)
+* performance is important - RWD, mobile first
+* cool and can be used in places which aren't browser centric (Node, phones, devices)
 
 Run naked and run free
 
@@ -134,7 +134,7 @@ document.getElementsByTagName(".myclass");
 live collection - can also be applied to other nodes (not just document)
 
 Performance:
-http://jsperf.com/digpen-dom-selector-test
+http://jsperf.com/digpen-dom-selector-test/3
 
 Took 500 lines of HTML from digpen.com.
 Selected all speaker names from the programme section
@@ -146,15 +146,34 @@ getElementsByClassName (IE9+) - 3,804,000 Chrome (234x faster), 4,730,000 Firefo
 Admittedly, you don't normally do thousands of hundreds selections per page but it illustrates the difference.
 
 
-DOM manipulation
-----------------
-innerHTML
-textContent
-
 Style manipulation
 ------------------
 classList
 changing classes
+
+http://jsperf.com/digpen-class-manipulation
+
+jQuery single - 386 Firefox, 1,650 Chrome, IE11 623
+jQuery multiple - 387 Firefox, 1,610 Chrome, IE11 602
+classList multiple - 816 Firefox (2.1x), 2,060 Chrome (28%), IE11 998 (60%)
+classList single - 596 Firefox (54%), 2,921 Chrome (77%), IE11 1,103 (77%)
+
+
+DOM manipulation
+----------------
+
+Changing text
+http://jsperf.com/digpen-text-changing
+
+jQuery - 2,336 Firefox, 3,709 Chrome, IE11 238
+textContent (IE9+) - 12,277 Firefox (5.2x), 9,739 Chrome (2.6x), IE11 1,038 (4.4x)
+
+Changing DOM nodes
+http://jsperf.com/digpen-dom-node-insertion
+Admittedly, this test I tried to make it hard for the browser and didn't use innerHTML
+
+jQuery - 1,999 Firefox, 3,055 Chrome, IE11 311
+DOM - 8,882 Firefox (4.4x), 6,265 Chrome (2x), IE11 493 (59%)
 
 
 Animation
@@ -166,18 +185,6 @@ There are exceptions, but they're just that - exceptions. The standard bouncing,
 Velocity: http://velocityjs.org/
 GSAP: http://greensock.com/gsap
 
-
-Chaining inefficiency
----------------------
-multiple loops
-each
-
-
-Events
-------
-
-Ajax
-----
 
 
 Reasons to retain jQuery
