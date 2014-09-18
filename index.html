@@ -42,7 +42,7 @@
 
     <aside class="notes">
 
-      <p>Hello! My name's Craig Buckler and I'm a freelance web consultant from Devon.</p>
+      <p>Hello! My name's Craig Buckler and I'm a freelance web consultant from Exmouth.</p>
 
       <p>I'm a full-stack developer I primarily concentrate on front-end work as well as:</p>
 
@@ -62,13 +62,11 @@
 
 
   <section>
-    <h1>Question&hellip;</h1>
-
-    <h2>Do you use jQuery?</h2>
-
-    <h2 class="fragment">Do you use jQuery in every project?</h2>
+    <h1>Do you use</h1>
 
     <img src="assets/images/jquery.png" alt="jQuery" class="noback" />
+
+    <h1>?</h1>
 
     <aside class="notes">
 
@@ -76,11 +74,11 @@
 
       <p>So hands up all developers who do some amount of front-end work.</p>
 
-      <p>Keep your hand up if you use jQuery?</p>
-
-      <p>{NEXT} Keep your hand up if you use jQuery in every project.</p>
+      <p>Keep your hand up if you use jQuery in every project.</p>
 
       <p>Ooo, this could be a tough crowd.</p>
+
+      <p>moving on, this is what we'll discuss today</p>
 
     </aside>
 
@@ -93,16 +91,22 @@
     <ul>
       <li>what jQuery is</li>
       <li class="fragment">why it became popular</li>
-      <li class="fragment">whether you need it in your next project</li>
+      <li class="fragment">reasons to reconsider using it</li>
     </ul>
+
+    <aside class="notes">
+
+      <p>all these slides and notes are available online and I'll give you a link at the end.</p>
+
+    </aside>
 
   </section>
 
 
-  <section>
+  <section data-background="assets/images/punch.jpg">
     <h1>But we won't</h1>
 
-    <p>bash jQuery</p>
+    <h2>bash jQuery</h2>
 
     <aside class="notes">
 
@@ -115,7 +119,7 @@
   </section>
 
 
-  <section>
+  <section data-background="assets/images/money.png" data-background-size="auto" data-background-repeat="repeat">
     <h1>Shameless plug</h1>
 
     <img src="assets/images/jquery-course.png" alt="jQuery course" class="noback" style="width:300px;" />
@@ -124,9 +128,11 @@
 
     <aside class="notes">
 
-      <p>that I even created a jQuery video course which is available from all good online training stores</p>
+      <p>that I even created a jQuery video course.</p>
 
-      <p>and probably some bad stores too</p>
+      <p>It's available from all good online training stores...</p>
+
+      <p>and probably some bad ones too</p>
 
     </aside>
 
@@ -140,9 +146,6 @@
       <li class="fragment">a library written in JavaScript&hellip;</li>
       <li class="fragment">&hellip;to help browser-based JavaScript development</li>
     </ul>
-
-    <aside class="notes">
-    </aside>
 
   </section>
 
@@ -159,9 +162,13 @@
 
       <p>It's not</p>
 
-      <p>A language in it's own right. jQuery syntax is JavaScript syntax. It has a slightly different approach in some respects but it's still JavaScript below the surface.</p>
+      <p>{NEXT} A language in it's own right.</p>
 
-      <p>Essential. jQuery like any JavaScript language or framework may help you write code but that functionality can still be implemented without jQuery should you choose to do so.</p>
+      <p>jQuery syntax is JavaScript syntax. It has a slightly different approach in some respects but it's still native JavaScript below the surface.</p>
+
+      <p>{NEXT} An essential part of modern web development.</p>
+
+      <p>Like any library or framework, jQuery can help you write code but the same functionality can be implemented without jQuery if necessary.</p>
 
     </aside>
 
@@ -186,19 +193,27 @@
 
     <aside class="notes">
 
-      <p>So let's look at the history of jQuery.</p>
+      <p>Let's look at the history of jQuery.</p>
 
-      <p>In 2006, developers had a renewed interest in client-side browser applications. Ajax techniques were increasingly popular and were being used by applications such as GMail and Google Maps.</p>
+      <p>In 2006, developers had a renewed interest in client-side browser applications.</p>
 
-      <p>Browsers were starting to offer desktop-like functionality and speed</p>
+      <p>Ajax techniques were increasingly popular and the first modern web apps such as GMail and Google Maps had started to appear.</p>
+
+      <p>Finally, connected web applications were starting to offer desktop-like interface functionality and speed.</p>
 
       <p>{NEXT} But behind the scenes, browsers were a hostile environment.</p>
 
-      <p>Microsoft had abandoned Internet Explorer which was still the most-used application. There were very few tools and the best you could hope for was cryptic messages like this.</p>
+      <p>Microsoft had abandoned Internet Explorer but it was still the most-used application.</p>
 
-      <p>{NEXT} we had a couple of competing browsers such as Firefox and Opera, but these adopted W3C standards which weren't necessarily compatible with IE</p>
+      <p>There were very few tools and the best you could hope for was cryptic messages like this.</p>
 
-      <p>{NEXT} and to many developers coming from backend or desktop languages, JavaScript seemed very weird and difficult</p>
+      <p>{NEXT} we had a couple of competing browsers such as Firefox and Opera, but they adopted W3C standards and weren't necessarily compatible with IE's way of doing things.</p>
+
+      <p>{NEXT} also, for many developers coming from backend or desktop languages, JavaScript seemed very weird and difficult.</p>
+
+      <p>To be fair, this wasn't really JavaScript's fault but the browser APIs which JavaScript called.</p>
+
+      <p>But few cared about that distinction.</p>
 
     </aside>
 
@@ -212,11 +227,15 @@
 
     <aside class="notes">
 
-      <p>Now don't forget it's not just a handful of desktop browsers developers are trying to support. The iPhone arrived in 2007 and Android appeared soon after. Each has different browsers, different APIs and different bugs.</p>
+      <p>Don't forget it's not just a handful of desktop browsers developers are trying to support.</p>
 
-      <p>So soon, developers were creating functions which helped get around the browser differences in language support, the document object model, event objects, XMLHttpRequest and more.</p>
+      <p>The iPhone arrived in 2007 and Android appeared soon after. Each has different browsers, different APIs and different bugs.</p>
 
-      <p>These functions were then wrapped into into libraries which offered a more consistent development platform. We soon saw the rise of projects such as Prototype, MooTools and YUI.</p>
+      <p>So developers started to create helper functions which smoothed over browser inconsistencies.</p>
+
+      <p>These functions were then wrapped into into libraries which offered an easier development platform.</p>
+
+      <p>We soon saw the launch of projects such as Prototype, MooTools and YUI.</p>
 
     </aside>
 
@@ -230,24 +249,34 @@
 $;</code></pre>
 
     <pre class="fragment"><code>// CSS selector syntax
-$("#main-section p.name");</code></pre>
+$("#main-section .name");</code></pre>
 
     <pre class="fragment"><code>// concise method chaining
-$("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre>
+$("#main-section .name").text("hello").addClass("new").slideDown();</code></pre>
 
     <aside class="notes">
 
-      <p>jQuery arrived quite late to the party but John Resig - it's developer - learned from the other JavaScript libraries which had started to become increasingly large and cumbersome. He devised a number of elegant features.</p>
+      <p>Now jQuery arrived a little late to the party.</p>
 
-      <p>jQuery offered a single object - the dollar sign. It was simple.</p>
+      <p>But John Resig - it's developer - learned from the other JavaScript libraries which had started to become increasingly large and cumbersome.</p>
 
-      <p>{NEXT} next, you could select DOM nodes using CSS selectors. This may seem quite obvious now but it was revolutionary at the time.</p>
+      <p>He devised a number of elegant features.</p>
 
-      <p>{NEXT} and it also offered method chaining. Most jQuery method return the jQuery object itself which means it can be passed into another method.</p>
+      <p>First jQuery offered a single object - the dollar sign. It was simple and tied most methods to the document elements you were acting on.</p>
 
-      <p>So here we're selecting a number of HTML elements, setting the text to "Hello", adding a class, and running a slideDown animation. It's concise and very readable.</p>
+      <p>{NEXT} next, you could select DOM nodes using CSS selectors.</p>
 
-      <p>This made jQuery phenominally successful. Even web development job vacancies started requesting jQuery skills over and above JavaScript itself.</p>
+      <p>This seems obvious now but it was revolutionary at the time.</p>
+
+      <p>{NEXT} jQuery offered method chaining.</p>
+
+      <p>Most methods returned the jQuery object itself which meant it can be passed into another method.</p>
+
+      <p>So here we're selecting a number of HTML elements, setting the text to "Hello", adding a class, and running a slideDown animation.</p>
+
+      <p>It's concise and easy to read no matter what development experience you have.</p>
+
+      <p>This made jQuery phenominally successful.</p>
 
     </aside>
 
@@ -271,7 +300,7 @@ $("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre
 
       <p>How successful?</p>
 
-      <p>If we take the top 1 million websites according to traffic volumes, how many do you think use jQuery?</p>
+      <p>If we take the top 1 million websites according to traffic volumes, what percentage do you think use jQuery?</p>
 
       <p>{NEXT} it's almost 60 percent</p>
 
@@ -279,7 +308,7 @@ $("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre
 
       <p>{NEXT} it rises to almost 80%</p>
 
-      <p>{NEXT} finally, what if we look at all sites and find those using some type of JavaScript library. What proportion of those use jQuery? Anyone?</p>
+      <p>{NEXT} finally, if we just look at sites using some type of JavaScript library, what proportion use jQuery?</p>
 
       <p>{NEXT} it's 94.3 percent. jQuery wins. Everyone else might as well give up.</p>
 
@@ -305,17 +334,21 @@ $("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre
 
       <p>So let's look at the good parts of jQuery.</p>
 
-      <p>{NEXT} selecting DOM nodes using CSS selectors was inspired. jQuery's Sizzle selector engine is generally more advanced than that offered by the browser vendors.</p>
+      <p>{NEXT} selecting DOM nodes using CSS selectors was inspired.</p>
+
+      <p>jQuery's Sizzle selector engine is generally more advanced than that implemented in browsers themselves.</p>
 
       <p>{NEXT} method chaining offers a consistent and easy to read API</p>
 
-      <p>{NEXT} you rarely worry about cross-browser support - jQuery works everywhere</p>
+      <p>{NEXT} you rarely worry about cross-browser support because jQuery works everywhere</p>
 
       <p>{NEXT} most people can string a few methods together and do something useful</p>
 
-      <p>{NEXT} the online documentation is great and you'll find answers everywhere</p>
+      <p>{NEXT} the online documentation is very good and you'll find answers everywhere</p>
 
-      <p>{NEXT} it covers the core browser APIs: dom traversal, node manipulation, event handling, Ajax and animation</p>
+      <p>{NEXT} it covers the core browser APIs:</p>
+
+      <p>that's dom traversal, node manipulation, event handling, Ajax and animation</p>
 
     </aside>
 
@@ -337,23 +370,31 @@ $("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre
 
     <aside class="notes">
 
-      <p>but the web has changed a lot since jQuery arrived in 2006.</p>
+      <p>but the web has changed since jQuery arrived 8 years ago.</p>
 
-      <p>{NEXT} first, IE6 and 7 are rarely a problem any longer</p>
+      <p>{NEXT} first, IE6 and 7 are rarely a problem any longer. Yay!</p>
 
-      <p>{NEXT} unless you're unlucky, IE8 usage has dropped below 1 in 20 users for most sites and the browser is rarely problematic compared to its predecessors</p>
+      <p>{NEXT} unless you're unlucky, IE8 usage has dropped below 1 in 20 users for most sites.</p>
+
+      <p>and the browser is rarely as problematic as its predecessors.</p>
 
       <p>You should also be aware that jQuery 2 has dropped support for IE8 and below.</p>
 
-      <p>{NEXT} you may not believe me but IE11 is a good browser. It's fast and won't give you any more problems than any other browser. IE9 and 10 are fine too; they're just missing support for lesser-used APIs</p>
+      <p>{NEXT} you may not believe me but IE11 is a good browser. Ooo, controversial.</p>
+
+      <p>It's fast and it won't give you more problems than any other browser.</p>
+
+      <p>IE9 and 10 are mostly fine too; they're just missing support for CSS3 animation and newer HTML5 APIs</p>
 
       <p>{NEXT} all the vendors are working together to ensure compatibility. It doesn't always work but...</p>
 
       <p>{NEXT} the top applications are close than they've ever been</p>
 
-      <p>{NEXT} and that includes mobile devices which now offer very capable browsers</p>
+      <p>{NEXT} and that includes mobile devices which offer very capable browsers</p>
 
-      <p>{NEXT} and finally, the vendors understand the popularity of jQuery and have started to add similar useful APIs</p>
+      <p>{NEXT} and finally, the vendors understand the popularity of jQuery.</p>
+
+      <p>so they've started to add similar APIs</p>
 
     </aside>
 
@@ -375,23 +416,39 @@ $("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre
 
     <aside class="notes">
 
-      <p>So the problems jQuery solved for us 8 years ago don't necessarily exist today. Let's look at the bad parts...</p>
+      <p>So the problems jQuery solved for us don't necessarily exist today. Let's look at the bad parts...</p>
 
-      <p>{NEXT} browser vendors have implemented a methods named querySelector and querySelectorAll which fetch nodes using CSS selectors. It's even supported in IE8. So it's a native implementation and jQuery will use it if it's available. But that can mean jQuery adds an unncecessary overhead.</p>
+      <p>{NEXT} you no longer need jQuery to locate DOM nodes by CSS selectors.</p>
 
-      <p>{NEXT} chaining looks cool until you realise that almost every method in that chain is looping through every node. That can be inefficient since a single loop could do the same work.</p>
+      <p>All modern browsers have implemented methods named querySelector and querySelectorAll which do the same thing.</p>
 
-      <p>{NEXT} first, jQuery doesn't support every browser. If you come up against a problem with  a specific device, it's incredibly difficult to fix jQuery - you have to report a bug and hope the team will take it seriously.</p>
+      <p>It's even supported in IE8 and jQuery uses it when it's available.</p>
 
-      <p>Next problem ... and I think you can see where I'm going with this!</p>
+      <p>So, in effect jQuery is just a wrapper around a single method call.</p>
 
-      <p>{NEXT} the shallow learning curve allows you do things which are specatularly inefficient but they work. But jQuery hides much of the implementation from you so it's not always obvious something is wrong.</p>
+      <p>{NEXT} chaining looks cool until you realise that almost every method in the chain loops through every selected node.</p>
 
-      <p>{NEXT} jQuery's documentation is ubiquitous. If you ask a question about a specific JavaScript issue on StackOverflow, 99 times out of 100 you'll get the answer "seriously dude, just use jQuery". That's not necessarily useful.</p>
+      <p>That can be inefficient since a single loop could do the same work.</p>
 
-      <p>{NEXT} finally, jQuery covers the core APIs only. These are all consistent in modern browsers so we don't need so much assistance. But there are dozens of other advanced HTML5 APIs jQuery doesn't help you with.</p>
+      <p>{NEXT} next: jQuery doesn't support every browser.</p>
 
-      <p>If you're totally reliant on jQuery, you may struggle to use a new API because your crutch has been kicked away.</p>
+      <p>If you encounter a problem with a specific device, it's very difficult to fix jQuery - you have to hope the team will fix it. And they won't do that for older browsers.</p>
+
+      <p>{NEXT} as I mentioned with chaining, the learning curve allows you do things which work but are specatularly inefficient.</p>
+
+      <p>The trouble is they look concise but jQuery hides the implementation from you.</p>
+
+      <p>{NEXT} jQuery's documentation is ubiquitous.</p>
+
+      <p>If you ask a JavaScript question on StackOverflow, 99 times out of 100 you'll get the answer "seriously dude, just use jQuery". That's not necessarily helpful.</p>
+
+      <p>{NEXT} finally, jQuery only covers the core APIs only.</p>
+
+      <p>But these are consistent in modern browsers so we don't need so much assistance.</p>
+
+      <p>Unfortunately, there are dozens of other HTML5 APIs jQuery won't help you with.</p>
+
+      <p>If you're totally reliant on it, you may struggle to use a new API because your jQuery crutch has been kicked away.</p>
 
     </aside>
 
@@ -405,7 +462,6 @@ $("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre
       <li class="fragment">jQuery is perfect</li>
       <li class="fragment">write less, do more</li>
       <li class="fragment">jQuery is only 30Kb</li>
-      <li class="fragment">jQuery is a high-level language</li>
       <li class="fragment">learning JavaScript isn't necessary</li>
     </ul>
 
@@ -413,21 +469,25 @@ $("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre
 
     <aside class="notes">
 
-      <p>Because jQuery has been so useful it's led to several misconceptions about it and JavaScript in general.</p>
+      <p>So because jQuery has been so successful, it's led to several misconceptions within the developer community.</p>
 
-      <p>{NEXT} jQuery is not perfect - it has bugs and issues like any other project. It is generally robust, but fully depending on it isn't necessarily wise.</p>
+      <p>{NEXT} jQuery is not perfect. It has bugs and issues like any other project. It is generally robust, but you'll encounter issues if you stretch it.</p>
 
-      <p>{NEXT} this is jQuery's catchphrase but it's not necessarily true these days. If you're doing something reasonabily complex, jQuery won't always mean less code.</p>
+      <p>{NEXT} this is jQuery's catchphrase but it's not necessarily true today.</p>
 
       <p>{NEXT} minified and gzipped jQuery is only 32K. That's nothing when compared with an image.</p>
 
-      <p>But it's important to realise the actual source is nearer 300K and it has a processing overhead. You're unlikely to be using more than a fraction of jQuery's functionality yet all that code is referenced in every object you create.</p>
+      <p>But it's important to realise the uncompressed source is nearer 300K and that has a processing overhead.</p>
 
-      <p>{NEXT} I've heard this a few times. JavaScript is considered to be some sort of low-level assembly language which jQuery somehow makes usable. It's nonsense; jQuery is written in JavaScript and covers a very small subset of functionality.</p>
+      <p>Few of use use more than a fraction of jQuery's functionality yet the whole library is referenced in every object you create.</p>
 
       <p>{NEXT} finally, the classic: "learning JavaScript isn't necessary because jQuery exists". </p>
 
-      <p>It's strange that many web developers actively avoid learning JavaScript. But remember, jQuery won't always help you leverage new HTML5 APIs. Nor will it help write programs in other environments.</p>
+      <p>JavaScript is considered to be some sort of low-level assembly language and jQuery makes it usable.</p>
+
+      <p>It's nonsense of course; jQuery helps you with a tiny subset of browser functionality.</p>
+
+      <p>but many web developers actively avoid learning JavaScript.</p>
 
       <p>And don't forget that jQuery may not be around forever. Ask any YUI developer...</p>
 
@@ -453,15 +513,17 @@ $("#main-section p.name").text("hello").addClass("new").slideDown();</code></pre
 
       <p>{NEXT} the core browser APIs are consistent and oldIEs have mostly died so it's far easier than it used to be.</p>
 
-      <p>{NEXT} everyone's jumping on the JavaScript bandwagon. It's can be used in places outside the browser such as server-side Node.js, operating systems such as Chrome and Firefox OS, and even on embedded systems.</p>
+      <p>{NEXT} everyone's jumping on the JavaScript bandwagon. It's can be used in places outside the browser such as server-side Node.js, operating systems such as Chrome and Firefox OS, and even in embedded systems.</p>
 
-      <p>{NEXT} and finally, it's fast. Far faster than using jQuery which contains fallback code for obsolete devices and other internal jQuery code.</p>
+      <p>{NEXT} and finally, it's fast. Far faster than using jQuery which is often a wrapper for native methods.</p>
 
-      <p>Performance is increasingly important. How many people are working on websites with responsive web designs? It's everyone.</p>
+      <p>It's Performance is increasingly important.</p>
 
-      <p>We'll spend many development hours making a site design responsive but put little effort into performance. So the design may be responsive but the user experience won't be.</p>
+      <p>How many you are working on sites with a responsive web design? It's everyone.</p>
 
-      <p>So let's look at the gains you can make by stripping off your jQuery shackles and running naked through the JavaScript world!</p>
+      <p>We spend many development hours making a site design responsive but put relatively little effort into efficiency or performance. The design may be responsive but the user experience isn't.</p>
+
+      <p>So let's look at the performance gains you can make by removing your jQuery shackles and running naked and free in the JavaScript world!</p>
 
     </aside>
 
@@ -501,7 +563,7 @@ document.getElementById("programme").getElementsByClassName("name");</code></pre
 
       <p>But can anyone guess how much faster getElementsByClassName will be?</p>
 
-      <p>{NEXT} It's hundreds of times faster. Almost 1,000 times faster on Firefox. My initial reaction was that I'd done some shonky testing code but I've verified it and it's all producing the same output.</p>
+      <p>{NEXT} It's hundreds of times faster. Almost 1,000 times faster on Firefox. My initial reaction was that I'd written some shonky testing code but I've verified it outside of jsperf using 100,000 loops. If anything, native JavaScript was more than 2,000 faster and even querySelectorAll was almost twice as fast as jQuery.</p>
 
       <p>Undoubtedly the browsers are caching results and the figures will differ across pages, platforms and applications. You're also unlikely to be doing such intensive node selection but it illustrates just how fast raw JavaScript can be.</p>
 
@@ -772,6 +834,38 @@ for (i = 0; i &lt; name.length; i++) { name[i].removeChild(name[i].lastChild); }
       <p>and even jQuery itself offers custom builds so you could, for example, leave of animation methods if you've swithed to CSS3.</p>
 
       <p>The only downside is that plugins could fail if they depended on those methods.</p>
+
+      <p>but really, my main advice would be</p>
+
+    </aside>
+
+  </section>
+
+
+  <section>
+    <h1>Just Learn JavaScript</h1>
+
+    <aside class="notes">
+
+      <p>jQuery exposes you to a subset JavaScript and it's rapidly shrinking in usefulness.</p>
+
+      <p>With a reasonable understanding of JavaScript, it's easier to explore the numerous HTML5 APIs and it opens a new world of possibilities</p>
+
+    </aside>
+
+  </section>
+
+
+  <section data-background="assets/images/money.png" data-background-size="auto" data-background-repeat="repeat">
+    <h1>Another plug</h1>
+
+    <img src="assets/images/javascript-course.png" alt="JavaScript course" class="noback" style="width:300px;" />
+
+    <p><a href="http://tinyurl.com/javascript-course">tinyurl.com/javascript-course</a></p>
+
+    <aside class="notes">
+
+      <p>of course, if you need help learning JavaScript there's no end of books and ahem, video courses</p>
 
     </aside>
 
