@@ -11,7 +11,7 @@
 <style>
 body {
     font-family: serif;
-    font-size: 1.25em;
+    font-size: 1.3em;
     line-height: 1.5;
     color: #333;
     background-color: #fff;
@@ -20,8 +20,7 @@ body {
 h1, h2, p, ul, ol, img, pre, table { display: none; }
 
 aside.notes {
-    border-top: 2px solid #888;
-    margin: 2em 0;
+    margin: 0;
     page-break-after: always;
 }
 
@@ -31,7 +30,6 @@ aside.notes p, aside.notes ul {
 </style>
 </head>
 <body>
-
 
 <div class="reveal"><div class="slides">
 
@@ -86,7 +84,7 @@ aside.notes p, aside.notes ul {
 
       <p>Ooo, this could be a tough crowd!</p>
 
-      <p>So moving on, this is what we'll discuss today...</p>
+      <p>Moving on, this is what we'll discuss today...</p>
 
     </aside>
 
@@ -108,9 +106,9 @@ aside.notes p, aside.notes ul {
 
       <p>Why it became popular</p>
 
-      <p>and the reasons you should or shouldn't use it.</p>
+      <p>and the reasons you should and perhaps shouldn't use it.</p>
 
-      <p>All these slides and notes are available online - I'll give you a link at the end.</p>
+      <p>These slides and notes are available online - I'll give you a link at the end.</p>
 
     </aside>
 
@@ -150,7 +148,7 @@ aside.notes p, aside.notes ul {
 
       <p>which available from all good online training stores...</p>
 
-      <p>and probably a few bad ones too</p>
+      <p>and probably a selection of bad ones too</p>
 
     </aside>
 
@@ -202,7 +200,7 @@ aside.notes p, aside.notes ul {
   <section>
     <h1>Why we use jQuery?</h1>
 
-    <p class="left">In 2006:</p>
+    <p class="left">Ten years ago&hellip;</p>
 
     <ul>
       <li>client-side heavy applications were new</li>
@@ -219,7 +217,7 @@ aside.notes p, aside.notes ul {
 
       <p>Let's look at the history of jQuery.</p>
 
-      <p>In 2006, developers became interested in client-side browser applications.</p>
+      <p>In 2004, developers became interested in client-side browser applications.</p>
 
       <p>Ajax was increasingly popular. And modern web apps such as GMail and Google Maps had started to appear.</p>
 
@@ -231,7 +229,7 @@ aside.notes p, aside.notes ul {
 
       <p><strong>{NEXT}</strong> we had a couple of competing browsers such as Firefox and Opera</p>
 
-      <p>but they adopted newer W3C standards and weren't necessarily compatible with IE's way of doing things.</p>
+      <p>but they adopted newer W3C standards and weren't necessarily compatible with IE.</p>
 
       <p><strong>{NEXT}</strong> also, for many developers coming from backend or desktop languages, JavaScript seemed a little weird and difficult to comprehend.</p>
 
@@ -247,17 +245,17 @@ aside.notes p, aside.notes ul {
 
     <aside class="notes">
 
-      <p>In 2006 developers had to support a handful of desktop browsers.</p>
+      <p>In 2004 developers had a handful of desktop browsers to support.</p>
 
-      <p>So they created helper functions which smoothed over inconsistencies.</p>
+      <p>So they created helper functions which smoothed over the inconsistencies.</p>
 
       <p>And these functions were wrapped into into libraries and released into the open source community.</p>
 
       <p>We saw the launch of projects such as Prototype and MooTools which made development easier.</p>
 
-      <p>The iPhone then arrived in 2007 with Android soon after.</p>
+      <p>But then the iPhone, Android and other mobiles started to arrive.</p>
 
-      <p>We suddenly had numerous different browsers, APIs and bugs to content with.</p>
+      <p>We suddenly had numerous different devices, browsers, APIs and bugs to content with.</p>
 
       <p>Using a JavaScript library became essential.</p>
 
@@ -280,7 +278,7 @@ $("#main-section .name").text("hello").addClass("new").slideDown();</code></pre>
 
     <aside class="notes">
 
-      <p>Now jQuery arrived a little late to the party.</p>
+      <p>Now jQuery was launched in 2006 and arrived a little late to the party.</p>
 
       <p>It's developer - John Resig -  learned from the competing libraries which had started to become large and cumbersome.</p>
 
@@ -368,7 +366,7 @@ $("#main-section .name").text("hello").addClass("new").slideDown();</code></pre>
 
       <p><strong>{NEXT}</strong> you rarely worry about cross-browser support because jQuery works everywhere</p>
 
-      <p><strong>{NEXT}</strong> it's easy to learn - most developers can string a few methods together to do something useful</p>
+      <p><strong>{NEXT}</strong> it's easy to learn - new developers can string a few methods together to do something useful</p>
 
       <p><strong>{NEXT}</strong> the online documentation is great and you can find answers everywhere</p>
 
@@ -402,7 +400,7 @@ $("#main-section .name").text("hello").addClass("new").slideDown();</code></pre>
 
       <p><strong>{NEXT}</strong> unless you're unlucky, IE8 usage has dropped below 1 in 20 users for most sites.</p>
 
-      <p>Be aware that jQuery 2 has dropped support for IE8 and below.</p>
+      <p>(Be aware that jQuery 2 has dropped support for IE8 and below)</p>
 
       <p><strong>{NEXT}</strong> you may not believe me but IE11 is a good browser (controversial!)</p>
 
@@ -426,7 +424,7 @@ $("#main-section .name").text("hello").addClass("new").slideDown();</code></pre>
 
     <table class="grid">
       <tr><td class="dim"><h2>the good parts</h2></td><td><h2>the bad parts</h2></td></tr>
-      <tr><td class="dim">CSS selectors</td><td>CSS selectors</td></tr>
+      <tr><td class="dim">CSS selectors</td><td class="fragment">CSS selectors</td></tr>
       <tr><td class="dim">method chaining</td><td class="hide">method chaining</td></tr>
       <tr><td class="dim">cross-browser support</td><td class="hide">cross-browser support</td></tr>
       <tr><td class="dim">shallow learning curve</td><td class="hide">shallow learning curve</td></tr>
@@ -491,13 +489,13 @@ var f = document.querySelector("#myid .myclass");
 
     <aside class="notes">
 
-      <p>method chaining looks cool. Until you realise that every method in the chain loops through every selected node. If you have three methods, that's three loops on the same nodes.</p>
+      <p>method chaining looks cool. Until you realise that every method in the chain loops through every selected node. If you have three methods, that's three loops on the same elements.</p>
 
       <p>A single loop should be far more effective.</p>
 
       <p><strong>{NEXT}</strong> next: jQuery doesn't support every browser.</p>
 
-      <p>It's great until you encounter a problem with a specific device. It doesn't happen often but when it does, it's difficult to fix.</p>
+      <p>It's great until you encounter a problem with a specific device. It doesn't happen often but when it does, it can be difficult to fix.</p>
 
       <p><strong>{NEXT}</strong> Next problem. And I think you can see where I'm going with this...</p>
 
@@ -507,9 +505,11 @@ var f = document.querySelector("#myid .myclass");
 
       <p><strong>{NEXT}</strong> what can be wrong with great documentation?</p>
 
-      <p>Ask a JavaScript question on StackOverflow. 99 times out of 100 you'll get the answer <em>"seriously dude, just use jQuery"</em>. That's not always helpful.</p>
+      <p>Visit StackOverflow and ask a question about JavaScript or any other library. 99 times out of 100 you'll get the answer <em>"seriously dude, just use jQuery"</em>.</p>
 
-      <p><strong>{NEXT}</strong> finally, jQuery only covers the core APIs.</p>
+      <p>jQuery documentation is ubiquitous and that can make it difficult to find information when you're using something else.</p>
+
+      <p><strong>{NEXT}</strong> finally, jQuery ONLY covers the core APIs.</p>
 
       <p>But these are consistent in modern browsers so we don't need as much assistance.</p>
 
@@ -540,7 +540,7 @@ var f = document.querySelector("#myid .myclass");
 
       <p><strong>{NEXT}</strong> jQuery has bugs and issues like any other project. It is robust, but don't expect it to be fault-free.</p>
 
-      <p><strong>{NEXT}</strong> this is jQuery's catchphrase but it's not necessarily true today.</p>
+      <p><strong>{NEXT}</strong> this is jQuery's tag line but I don't think it's always true today.</p>
 
       <p><strong>{NEXT}</strong> minified and gzipped jQuery is only 32K. And that's nothing when compared with assets like images.</p>
 
@@ -550,11 +550,11 @@ var f = document.querySelector("#myid .myclass");
 
       <p><strong>{NEXT}</strong> finally, the classic: <em>"learning JavaScript isn't necessary because jQuery exists"</em></p>
 
-      <p>Developers can think they understand JavaScript when they know a little jQuery. That's not the case.</p>
+      <p>Developers may think they understand JavaScript when they know a little jQuery - but they'd struggle without it.</p>
 
       <p>And don't forget that jQuery may not be around forever. Ask any YUI developer...</p>
 
-      <p><strong>{NEXT}</strong> So are we using jQuery out of habit rather than necessity? I've been guilty of that.</p>
+      <p><strong>{NEXT}</strong> So are we using jQuery out of habit rather than necessity? That's something I've been guilty of.</p>
 
     </aside>
 
@@ -576,7 +576,7 @@ var f = document.querySelector("#myid .myclass");
 
       <p><strong>{NEXT}</strong> the core browser APIs are consistent now that oldIEs have died.</p>
 
-      <p><strong>{NEXT}</strong> everyone's jumping on the JavaScript bandwagon. It's can be used outside the browser - such as on the server in Node.js, in OSes and even embedded systems.</p>
+      <p><strong>{NEXT}</strong> everyone's jumping on the JavaScript bandwagon. It can be used outside the browser - such as on the server in Node.js, in OSes and even embedded systems.</p>
 
       <p><strong>{NEXT}</strong> and it's fast. It's far faster than using jQuery which, as we've seen, is often a wrapper around native methods.</p>
 
@@ -618,7 +618,7 @@ document.getElementById("programme").getElementsByClassName("name");</code></pre
 
     <aside class="notes">
 
-      <p>For all these tests I've taken 500 lines of HTML code from the Digpen website and run various JavaScript tests at jsperf.com.</p>
+      <p>For all these tests I've taken 500 lines of HTML code from Digpen.com and run tests at jsperf.com.</p>
 
       <p>So we're going to find all Digpen speaker names by looking for elements with a class of 'name' within a section with an id of 'programme'.</p>
 
@@ -632,7 +632,7 @@ document.getElementById("programme").getElementsByClassName("name");</code></pre
 
       <p><strong>{NEXT}</strong> It's hundreds of times faster. Almost 1,000 times faster on Firefox.</p>
 
-      <p>My initial reaction was that I'd written some dodgy test code but I've verified it outside of jsperf using 100 thousand loops. If anything, native JavaScript was more than 2,000 faster and even querySelectorAll was almost twice as fast as jQuery.</p>
+      <p>My initial reaction was that I'd written some dodgy test code but I've verified it outside of jsperf using 100 thousand loops. If anything, native JavaScript can be 2,000 times faster and even querySelectorAll was almost twice as fast as jQuery.</p>
 
       <p>Undoubtedly the browsers are caching nodes and the boost will differ across pages, platforms and applications.</p>
 
@@ -677,7 +677,7 @@ for (i = 0; i &lt; li.length; i++) {
 
       <p>Class manipulation is something you do regularly when building client-side applications.</p>
 
-      <p>In all these tests the HTML element collection has been cached so there's no additional overhead.</p>
+      <p>In all these tests the collection of HTML elements has been cached so there's no additional overhead.</p>
 
       <p>for the first test, we'll run jQuery methods as separate commands.</p>
 
@@ -717,9 +717,9 @@ for (i = 0; i &lt; li.length; i++) {
 
       <p><strong>{NEXT}</strong> but even if you use the classList API in individual loops, you can expect a performance gain of 25% - or twice as fast on Firefox.</p>
 
-      <p>One of the reasons for this boost is because jQuery doesn't use the classList API and determines what it needs to add and remove using string analysis and concatenation.</p>
+      <p>One of the reasons for this boost is because jQuery doesn't use the classList API. It determines what it needs to add and remove using string analysis and concatenation.</p>
 
-      <p><strong>{NEXT}</strong> If we look at the single loop, we get a small boost on all browsers except Firefox which, for some reason, appears to prefer multiple loops!</p>
+      <p><strong>{NEXT}</strong> If we look at the single loop, we get a small boost on all browsers except Firefox which, for some reason, appears to prefer multiple loops? I don't know why.</p>
 
     </aside>
 
@@ -755,7 +755,7 @@ for (var i = 0; i &lt; name.length; i++) {
 
       <p>The first test uses jQuery's text method.</p>
 
-      <p>The second test again requires uses the textContent method which is available in IE9 and above.</p>
+      <p>The second test uses the textContent method which is available in IE9 and above.</p>
 
       <p><strong>{NEXT}</strong> so the jQuery results. IE's performance is shockingly slow.</p>
 
@@ -865,13 +865,13 @@ for (i = 0; i &lt; name.length; i++) { name[i].removeChild(name[i].lastChild); }
 
       <p><strong>{NEXT}</strong> Use CSS3 animations and transformations.</p>
 
-      <p>it's quicker to write, faster, more sophisticated and use fewer resources than whatever you come up with.</p>
+      <p>it's quicker to write, faster, more sophisticated and uses fewer resources than whatever you come up with.</p>
 
-      <p>Now CSS3 animations are simplistic but they're good enough for web site effects.</p>
+      <p>Now CSS3 animations are simplistic but they're good enough for web basic site effects.</p>
 
       <p>You don't get the frame control you need for action games but there are better options than jQuery</p>
 
-      <p>like Velocity or GSAP.</p>
+      <p>such as Velocity or GSAP.</p>
 
     </aside>
 
@@ -894,7 +894,7 @@ for (i = 0; i &lt; name.length; i++) { name[i].removeChild(name[i].lastChild); }
 
       <p>OK, so while performance could be an issue, I'd never say you should never use jQuery. It's still a great library.</p>
 
-      <p><strong>{NEXT}</strong> there's little point ripping it out of legacy applications unless you have serious performance issues</p>
+      <p><strong>{NEXT}</strong> there's little point ripping it out of legacy applications unless you have a serious performance issue</p>
 
       <p><strong>{NEXT}</strong> if you absolutely have to support IE6 and 7, well, I pity you. jQuery will help - just remember to stick with version 1.</p>
 
@@ -922,9 +922,9 @@ for (i = 0; i &lt; name.length; i++) { name[i].removeChild(name[i].lastChild); }
 
     <aside class="notes">
 
-      <p>Try and see if something can be achieved in raw JavaScript first.</p>
+      <p>Try raw JavaScript first.</p>
 
-      <p>jQuery helps you with subset of the language and browser functionality which is shrinking every day.</p>
+      <p>jQuery helps you with tiny subset of the language and browser functionality. And it's shrinking every day.</p>
 
       <p>With a basic understanding of JavaScript, you can explore numerous HTML5 APIs and open a new world of possibilities.</p>
 
@@ -942,7 +942,7 @@ for (i = 0; i &lt; name.length; i++) { name[i].removeChild(name[i].lastChild); }
 
     <aside class="notes">
 
-      <p>of course, if you need help learning JavaScript there's no end of books and, ahem, video courses available</p>
+      <p>of course, if you need help learning JavaScript there's no end of books, websites and, ahem, video courses available</p>
 
     </aside>
 
@@ -962,17 +962,17 @@ for (i = 0; i &lt; name.length; i++) { name[i].removeChild(name[i].lastChild); }
 
     <aside class="notes">
 
-      <p>Even if you gain Jedi-like JavaScript skills, you'll still want helper functions to manage things like Ajax.</p>
+      <p>Admittedly, it takes time to become a JavaScript Jedi Master. Even then, you'll still want helper functions to manage things like Ajax.</p>
 
-      <p>If you don't want the hassle of writing those yourself</p>
+      <p>If you don't want the hassle of writing those yourself or you cannot imagine life without jQuery's syntax</p>
 
-      <p>or you cannot imagine life without jQuery's syntax</p>
+      <p>there is a compromise in the form of micro-libraries.</p>
 
-      <p>there are some micro-libraries which mimic the API but offer better performance</p>
+      <p>these mimic jQuery's API in a smaller package with better performance</p>
 
       <p>as you can see, min.js is only 600 bytes and is essentially a wrapper for querySelectorAll and events</p>
 
-      <p>and jQuery itself offers custom builds so you can omit parts you don't use.</p>
+      <p>and jQuery itself offers custom builds. You can omit parts you don't need although it won't lead to a significant performance gain.</p>
 
     </aside>
 
