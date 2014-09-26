@@ -286,15 +286,15 @@ $("#main-section .name").text("hello").addClass("new").slideDown();</code></pre>
 
       <p>It's simple and ties functionality to the HTML elements you want to interact with.</p>
 
-      <p><strong>{NEXT}</strong> next, you could select HTML elements from the DOM using CSS selectors.</p>
+      <p><strong>{NEXT}</strong> next, you could select elements from the DOM using CSS selectors.</p>
 
       <p>Now this seems obvious now but it was revolutionary at the time.</p>
 
       <p><strong>{NEXT}</strong> jQuery offered method chaining.</p>
 
-      <p>Most jQuery methods return the jQuery object itself. This means it can be passed into another method to act on the same elements.</p>
+      <p>Most methods return the jQuery object itself. This means it can be passed into another method to act on the same set of elements.</p>
 
-      <p>So here we're selecting a number of HTML elements, setting the text to "Hello", adding a class, and running a slideDown animation.</p>
+      <p>So here we have a selection of elements where we're setting the text to "Hello", adding a class, and running a slideDown animation.</p>
 
       <p>It's concise. It's easy to read. Even developers with little experience could understand it.</p>
 
@@ -352,6 +352,7 @@ $("#main-section .name").text("hello").addClass("new").slideDown();</code></pre>
       <tr><td class="fragment">shallow learning curve</td><td class="hide">shallow learning curve</td></tr>
       <tr><td class="fragment">great documentation</td><td class="hide">great documentation</td></tr>
       <tr><td class="fragment">covers core APIs</td><td class="hide">covers core APIs</td></tr>
+      <tr><td class="fragment">extendibility</td><td class="hide">extendibility</td></tr>
     </table>
 
     <aside class="notes">
@@ -371,6 +372,8 @@ $("#main-section .name").text("hello").addClass("new").slideDown();</code></pre>
       <p><strong>{NEXT}</strong> it covers the core browser APIs:</p>
 
       <p>that's DOM selection, traversal, node manipulation, event handling, Ajax and a little animation thrown in</p>
+
+      <p><strong>{NEXT}</strong> and you can build on those core features. There are thousands of plugins available.</p>
 
     </aside>
 
@@ -428,6 +431,7 @@ $("#main-section .name").text("hello").addClass("new").slideDown();</code></pre>
       <tr><td class="dim">shallow learning curve</td><td class="hide">shallow learning curve</td></tr>
       <tr><td class="dim">great documentation</td><td class="hide">great documentation</td></tr>
       <tr><td class="dim">covers core APIs</td><td class="hide">covers core APIs</td></tr>
+      <tr><td class="dim">extendibility</td><td class="hide">extendibility</td></tr>
     </table>
 
     <aside class="notes">
@@ -483,13 +487,12 @@ var f = document.querySelector("#myid .myclass");
       <tr><td class="dim">shallow learning curve</td><td class="fragment">shallow learning curve</td></tr>
       <tr><td class="dim">great documentation</td><td class="fragment">great documentation</td></tr>
       <tr><td class="dim">covers core APIs</td><td class="fragment">covers core APIs</td></tr>
+      <tr><td class="dim">extendibility</td><td class="fragment">extendibility</td></tr>
     </table>
 
     <aside class="notes">
 
-      <p>method chaining looks cool. Until you realise that every method in the chain loops through every selected node. If you have three methods, that's three loops on the same elements.</p>
-
-      <p>A single loop should be far more effective.</p>
+      <p>method chaining looks cool. Until you realise every method loops through every selected node. If you have three methods, that's three loops on the same elements. A single loop should be more effective.</p>
 
       <p><strong>{NEXT}</strong> next: jQuery doesn't support every browser.</p>
 
@@ -507,13 +510,9 @@ var f = document.querySelector("#myid .myclass");
 
       <p>jQuery documentation is ubiquitous and that can make it difficult to find information when you're using something else.</p>
 
-      <p><strong>{NEXT}</strong> finally, jQuery ONLY covers the core APIs.</p>
+      <p><strong>{NEXT}</strong> the jQuery core ONLY covers the core APIs. But these are consistent in modern browsers and there are dozens of HTML5 APIs it won't help you with. In fact, you may struggle to use a new API because your jQuery crutch has been kicked away.</p>
 
-      <p>But these are consistent in modern browsers so we don't need as much assistance.</p>
-
-      <p>There are dozens of other HTML5 APIs jQuery won't help you with.</p>
-
-      <p>But if you're totally reliant on it, you may struggle to use a new API because your jQuery crutch has been kicked away.</p>
+      <p><strong>{NEXT}</strong> even plugins will only build on the jQuery core. Now you'll find plugins which don't use the core but then -- why are they using jQuery? A self-contained module would be compatible with any library.</p>
 
     </aside>
 
@@ -865,7 +864,7 @@ for (i = 0; i &lt; name.length; i++) { name[i].removeChild(name[i].lastChild); }
 
       <p>it's quicker to write, faster, more sophisticated and uses fewer resources than whatever you come up with.</p>
 
-      <p>Now CSS3 animations are simplistic but they're good enough for web basic site effects.</p>
+      <p>Now CSS3 animations are simplistic but they're good enough for basic website effects.</p>
 
       <p>You don't get the frame control you need for action games but there are better options than jQuery</p>
 
